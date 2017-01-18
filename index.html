@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="init.js"></script>
+    <script src="contro.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="con1">
+<div class="content">
+    <div class="content_left">
+        <ul ng-repeat="item in DataAll">
+            <li>
+                <h1><a href="{{item.titleurl}}">{{item.title}}</a></h1>
+                <p>
+                    <span>{{item.author}}</span>
+                    <span>{{item.time}}</span>
+                    <span>分类：{{item.sort}}</span><span>
+                    {{item.watchtime}}
+                </span>
+                </p>
+                <div class="contentimg">
+                    <img src="{{item.img}}">
+                    <p>{{item.content}}</p>
+                </div>
+                <div class="footer"><a href="{{item.readallurl}}">{{item.readall}}</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
